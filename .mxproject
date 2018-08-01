@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=C:/Users/PC/Desktop/一键锁机/MCU_STM32F103C8x_source/Inc
+HeaderPath=C:/Users/PC/Desktop/Meterz_reading/Inc
 HeaderFiles=stm32f1xx_it.h;stm32f1xx_hal_conf.h;main.h;ffconf.h;user_diskio.h;fatfs.h;gpio.h;tim.h;usart.h;
-SourcePath=C:/Users/PC/Desktop/一键锁机/MCU_STM32F103C8x_source/Src
+SourcePath=C:/Users/PC/Desktop/Meterz_reading/Src
 SourceFiles=stm32f1xx_it.h;stm32f1xx_hal_conf.h;main.h;stm32f1xx_it.c;stm32f1xx_hal_msp.c;main.c;user_diskio.c;fatfs.c;gpio.c;tim.c;usart.c;
 
 [PreviousLibFiles]

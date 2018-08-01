@@ -5,6 +5,8 @@
 "stm32f103c8x\gizwits_product.o"
 "stm32f103c8x\gizwits_protocol.o"
 "stm32f103c8x\hal_key.o"
+"stm32f103c8x\gps.o"
+"stm32f103c8x\user_flash.o"
 "stm32f103c8x\common.o"
 "stm32f103c8x\datapointtools.o"
 "stm32f103c8x\ringbuffer.o"

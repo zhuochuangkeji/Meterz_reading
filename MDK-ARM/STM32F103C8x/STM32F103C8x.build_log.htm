@@ -21,38 +21,23 @@ Target DLL:      Segger\JL2CM3.dll V2.99.13.0
 Dialog DLL:      TCM.DLL V1.14.4.0
  
 <h2>Project:</h2>
-C:\Users\PC\Desktop\一键锁机\MCU_STM32F103C8x_source\MDK-ARM\STM32F103C8x.uvprojx
-Project File Date:  07/18/2018
+C:\Users\PC\Desktop\Meterz_reading\MDK-ARM\STM32F103C8x.uvprojx
+Project File Date:  07/29/2018
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.05 update 1 (build 106)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild target 'STM32F103C8x'
 compiling stm32f1xx_hal_msp.c...
 compiling main.c...
-../Src/main.c(186): warning:  #177-D: variable "aTxStartMessages" was declared but never referenced
+../Src/main.c(191): warning:  #177-D: variable "aTxStartMessages" was declared but never referenced
         uint8_t aTxStartMessages[] = "\r\n******UART commucition using IT******\r\nPlease enter 10 characters:\r\n";
 ../Src/main.c: 1 warning, 0 errors
 compiling stm32f1xx_it.c...
 compiling gizwits_product.c...
 compiling gizwits_protocol.c...
-..\Gizwits\gizwits_protocol.c(868): warning:  #177-D: variable "sum" was declared but never referenced
-      uint8_t sum = 0;
-..\Gizwits\gizwits_protocol.c(872): warning:  #177-D: variable "tmpCount" was declared but never referenced
-      uint16_t tmpCount = 0;
-..\Gizwits\gizwits_protocol.c(873): warning:  #177-D: variable "protocolFlag" was declared but never referenced
-      static uint8_t protocolFlag = 0;
-..\Gizwits\gizwits_protocol.c(874): warning:  #177-D: variable "protocolCount" was declared but never referenced
-      static uint16_t protocolCount = 0;
-..\Gizwits\gizwits_protocol.c(875): warning:  #177-D: variable "lastData" was declared but never referenced
-      static uint8_t lastData = 0;
-..\Gizwits\gizwits_protocol.c(876): warning:  #177-D: variable "debugCount" was declared but never referenced
-      static uint8_t debugCount = 0;
-..\Gizwits\gizwits_protocol.c(877): warning:  #177-D: variable "head" was declared but never referenced
-      protocolHead_t *head = NULL;
-..\Gizwits\gizwits_protocol.c(1549): warning:  #550-D: variable "gpsret" was set but never used
-                int8_t gpsret = 0;
-..\Gizwits\gizwits_protocol.c: 8 warnings, 0 errors
 compiling hal_key.c...
+compiling gps.c...
+compiling user_flash.c...
 compiling common.c...
 compiling dataPointTools.c...
 compiling ringbuffer.c...
@@ -72,8 +57,8 @@ compiling stm32f1xx_hal_uart.c...
 assembling startup_stm32f103xb.s...
 compiling system_stm32f1xx.c...
 linking...
-Program Size: Code=16960 RO-data=364 RW-data=60 ZI-data=9252  
-"STM32F103C8x\STM32F103C8x.axf" - 0 Error(s), 9 Warning(s).
+Program Size: Code=17812 RO-data=364 RW-data=68 ZI-data=9284  
+"STM32F103C8x\STM32F103C8x.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -84,7 +69,7 @@ Package Vendor: ARM
    * Component: CORE Version: 3.40.0
 
 <h2>Collection of Component include folders:</h2>
-  C:\Users\PC\Desktop\一键锁机\MCU_STM32F103C8x_source\MDK-ARM\RTE
+  C:\Users\PC\Desktop\Meterz_reading\MDK-ARM\RTE
   C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include
   C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include
 

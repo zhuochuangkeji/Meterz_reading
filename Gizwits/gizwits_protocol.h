@@ -640,7 +640,7 @@ int32_t gizwitsHandle(dataPoint_t *currentData);
 int32_t gizwitsPassthroughData(uint8_t * gizdata, uint32_t len);
 void gizwitsGetModuleInfo(void);
 int32_t gizPutData(uint8_t *buf, uint32_t len);
-
+int32_t gizGpsPutData(uint8_t *buf, uint32_t len);
 /**@} */
 #ifdef __cplusplus
 }

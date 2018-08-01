@@ -300,8 +300,8 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef*UartHandle)
 				}
 		if(UartHandle->Instance == USART3)  
 				{
-				GIZWITS_LOG("GPRS MODULE ...\n");					
-				gizPutData((uint8_t *)&gpsRxBuffer, 1);
+				//GIZWITS_LOG("%c", gpsRxBuffer);					
+				gizGpsPutData((uint8_t *)&gpsRxBuffer, 1);
 				HAL_UART_Receive_IT(&huart3, (uint8_t *)&gpsRxBuffer,1);  
 				}
 		

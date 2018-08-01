@@ -44,7 +44,9 @@
 #include "hal_key.h"
 #include "gizwits_product.h"
 #include "common.h"
-/* USER CODE END Includes */
+#include "user_flash.h"
+
+/* */
 
 /* Private variables ---------------------------------------------------------*/
 TIM_HandleTypeDef htim2;
@@ -183,6 +185,9 @@ int main(void)
 	gizwitsInit();
 	keyInit();
 	GIZWITS_LOG("MCU Init Success \n");
+	printFlashTest();
+	writeFlashTest();
+	printFlashTest();
 	uint8_t aTxStartMessages[] = "\r\n******UART commucition using IT******\r\nPlease enter 10 characters:\r\n";
 
 
@@ -197,7 +202,6 @@ int main(void)
   /* USER CODE BEGIN 3 */
 		userHandle();
 		gizwitsHandle((dataPoint_t *)&currentDataPoint);
-		//HAL_UART_Transmit_IT(&huart3 ,(uint8_t*)aTxStartMessages,sizeof(aTxStartMessages));
   }
   /* USER CODE END 3 */
 

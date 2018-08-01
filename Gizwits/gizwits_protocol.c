@@ -60,6 +60,36 @@ int32_t gizPutData(uint8_t *buf, uint32_t len)
 }
 
 
+/**@} */
+
+/**
+* @brief Write data to the ring buffer
+* @param [in] buf        : buf adress
+* @param [in] len        : byte length
+* @return   correct : Returns the length of the written data
+            failure : -1
+*/
+int32_t gizGpsPutData(uint8_t *buf, uint32_t len)
+{
+    int32_t count = 0;
+
+    if(NULL == buf)
+    {
+        GIZWITS_LOG("ERR: gizGpsPutData buf is empty \n");
+        return -1;
+    }
+
+    count = rbWrite(&pGps, buf, len);
+    if(count != len)
+    {
+        GIZWITS_LOG("ERR: Failed to rbWrite \n");
+        return -1;
+    }
+
+    return count;
+}
+
+
 
 /**
 * @brief Protocol header initialization
@@ -865,17 +895,10 @@ static int8_t gizProtocolGetOnePacket(rb_t *rb, uint8_t *gizdata, uint16_t *len)
 static int8_t gizGpsPacket(rb_t *rb)
 {
     int32_t ret = 0;
-    uint8_t sum = 0;
     int32_t i = 0;
     uint8_t tmpData;
     uint8_t tmpLen = 0;
-    uint16_t tmpCount = 0;
-    static uint8_t protocolFlag = 0;
-    static uint16_t protocolCount = 0;
-    static uint8_t lastData = 0;
-    static uint8_t debugCount = 0;
-    protocolHead_t *head = NULL;
-		GIZWITS_LOG("gizGpsPacket\n");
+		
     if(NULL == rb)
     {
         GIZWITS_LOG("gizProtocolGetOnePacket Error , Illegal Param\n");
@@ -883,6 +906,7 @@ static int8_t gizGpsPacket(rb_t *rb)
     }
 		
     tmpLen = rbCanRead(rb);
+	//	GIZWITS_LOG("tmpLen=%d\n",tmpLen);
     if(0 == tmpLen)
     {
         return -1;
@@ -893,7 +917,8 @@ static int8_t gizGpsPacket(rb_t *rb)
         ret = rbRead(rb, &tmpData, 1);
         if(0 != ret)
         {
-				GIZWITS_LOG("%c",tmpData);
+					GIZWITS_LOG("%c", tmpData);	
+					
 				}
 		}
  
@@ -1568,6 +1593,10 @@ int32_t gizwitsHandle(dataPoint_t *currentData)
     gizProtocolAckHandle();
     ret 	  	= gizProtocolGetOnePacket(&pRb, gizwitsProtocol.protocolBuf, &protocolLen);
 		gpsret	  = gizGpsPacket(&pGps);
+		if(gpsret==0)
+		{
+			GIZWITS_LOG("gpsret One Packet!\n");
+		}
     if(0 == ret)
     {
         GIZWITS_LOG("Get One Packet!\n");
