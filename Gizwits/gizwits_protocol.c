@@ -17,6 +17,7 @@
 #include "gizwits_product.h"
 #include "dataPointTools.h"
 
+
 /** Protocol global variables **/
 gizwitsProtocol_t gizwitsProtocol;
 
@@ -25,10 +26,10 @@ gizwitsProtocol_t gizwitsProtocol;
 * @{
 */
 rb_t pRb;                                               ///< Ring buffer structure variable
-rb_t pGps;                                               ///< Ring buffer structure variable
+
 
 static uint8_t rbBuf[RB_MAX_LEN];                       ///< Ring buffer data cache buffer
-static uint8_t gpsBuf[RB_MAX_LEN];                       ///< Ring buffer data cache buffer
+
 
 /**@} */
 
@@ -60,34 +61,7 @@ int32_t gizPutData(uint8_t *buf, uint32_t len)
 }
 
 
-/**@} */
 
-/**
-* @brief Write data to the ring buffer
-* @param [in] buf        : buf adress
-* @param [in] len        : byte length
-* @return   correct : Returns the length of the written data
-            failure : -1
-*/
-int32_t gizGpsPutData(uint8_t *buf, uint32_t len)
-{
-    int32_t count = 0;
-
-    if(NULL == buf)
-    {
-        GIZWITS_LOG("ERR: gizGpsPutData buf is empty \n");
-        return -1;
-    }
-
-    count = rbWrite(&pGps, buf, len);
-    if(count != len)
-    {
-        GIZWITS_LOG("ERR: Failed to rbWrite \n");
-        return -1;
-    }
-
-    return count;
-}
 
 
 
@@ -892,39 +866,6 @@ static int8_t gizProtocolGetOnePacket(rb_t *rb, uint8_t *gizdata, uint16_t *len)
 }
 
 
-static int8_t gizGpsPacket(rb_t *rb)
-{
-    int32_t ret = 0;
-    int32_t i = 0;
-    uint8_t tmpData;
-    uint8_t tmpLen = 0;
-		
-    if(NULL == rb)
-    {
-        GIZWITS_LOG("gizProtocolGetOnePacket Error , Illegal Param\n");
-        return -1;
-    }
-		
-    tmpLen = rbCanRead(rb);
-	//	GIZWITS_LOG("tmpLen=%d\n",tmpLen);
-    if(0 == tmpLen)
-    {
-        return -1;
-    }
-
-    for(i=0; i<tmpLen; i++)
-    {
-        ret = rbRead(rb, &tmpData, 1);
-        if(0 != ret)
-        {
-					GIZWITS_LOG("%c", tmpData);	
-					
-				}
-		}
- 
-
-    return 1;
-}
 
 
 
@@ -1347,21 +1288,6 @@ void gizwitsInit(void)
 				{
 				GIZWITS_LOG("rbCreate Faild \n");
 				}
-	  pGps.rbCapacity =GPS_MAX_LEN;
-		pGps.rbBuff = gpsBuf;
-    if(0 == rbCreate(&pGps))
-			{
-			GIZWITS_LOG("pGps rbCreate Success \n");
-			}
-		else
-			{
-			GIZWITS_LOG("pGps rbCreate Faild \n");
-			}
-	
-	
-	
-	
-	
     
     memset((uint8_t *)&gizwitsProtocol, 0, sizeof(gizwitsProtocol_t));
 }
@@ -1571,7 +1497,6 @@ static int8_t gizProtocolModuleInfoHandle(protocolHead_t *head)
 int32_t gizwitsHandle(dataPoint_t *currentData)
 {
     int8_t ret = 0;
-		int8_t gpsret = 0;
 #ifdef PROTOCOL_DEBUG
     uint16_t i = 0;
 #endif
@@ -1591,12 +1516,7 @@ int32_t gizwitsHandle(dataPoint_t *currentData)
 
     /*resend strategy*/
     gizProtocolAckHandle();
-    ret 	  	= gizProtocolGetOnePacket(&pRb, gizwitsProtocol.protocolBuf, &protocolLen);
-		gpsret	  = gizGpsPacket(&pGps);
-		if(gpsret==0)
-		{
-			GIZWITS_LOG("gpsret One Packet!\n");
-		}
+    ret = gizProtocolGetOnePacket(&pRb, gizwitsProtocol.protocolBuf, &protocolLen);
     if(0 == ret)
     {
         GIZWITS_LOG("Get One Packet!\n");

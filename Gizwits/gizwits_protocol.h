@@ -71,7 +71,7 @@ extern "C" {
 #define MAX_PACKAGE_LEN    (sizeof(devStatus_t)+sizeof(dataPointFlags_t)+20)                 ///< Data buffer maximum length                                   ///< Data buffer maximum length
 
 #define RB_MAX_LEN          (MAX_PACKAGE_LEN*2)     ///< Maximum length of ring buffer
-#define GPS_MAX_LEN         400
+
 
 /**@name Data point related definition
 * @{
@@ -637,6 +637,7 @@ void gizwitsInit(void);
 int32_t gizwitsSetMode(uint8_t mode);
 void gizwitsGetNTP(void);
 int32_t gizwitsHandle(dataPoint_t *currentData);
+
 int32_t gizwitsPassthroughData(uint8_t * gizdata, uint32_t len);
 void gizwitsGetModuleInfo(void);
 int32_t gizPutData(uint8_t *buf, uint32_t len);

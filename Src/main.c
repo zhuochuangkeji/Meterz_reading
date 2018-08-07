@@ -45,6 +45,7 @@
 #include "gizwits_product.h"
 #include "common.h"
 #include "user_flash.h"
+#include "gps.h"
 
 /* */
 
@@ -183,12 +184,13 @@ int main(void)
 
 	userInit();
 	gizwitsInit();
+	gpsInit();
 	keyInit();
 	GIZWITS_LOG("MCU Init Success \n");
 	printFlashTest();
 	writeFlashTest();
 	printFlashTest();
-	uint8_t aTxStartMessages[] = "\r\n******UART commucition using IT******\r\nPlease enter 10 characters:\r\n";
+//s	uint8_t aTxStartMessages[] = "\r\n******UART commucition using IT******\r\nPlease enter 10 characters:\r\n";
 
 
   /* USER CODE END 2 */
@@ -202,6 +204,9 @@ int main(void)
   /* USER CODE BEGIN 3 */
 		userHandle();
 		gizwitsHandle((dataPoint_t *)&currentDataPoint);
+		gpsHandle();
+		
+		
   }
   /* USER CODE END 3 */
 

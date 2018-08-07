@@ -26,7 +26,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x5ADCF0CA)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5ADCF0CA)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5ADCF0CA)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5ADCF0CA)
-F (../Src/main.c)(0x5B5D85C9)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\Gizwits -I..\Hal -I..\Utils --C99-I C:\Users\PC\Desktop\Meterz_reading\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o stm32f103c8x\main.o --omf_browse stm32f103c8x\main.crf --depend stm32f103c8x\main.d)
+F (../Src/main.c)(0x5B61CD6E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\Gizwits -I..\Hal -I..\Utils --C99-I C:\Users\PC\Desktop\Meterz_reading\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o stm32f103c8x\main.o --omf_browse stm32f103c8x\main.crf --depend stm32f103c8x\main.d)
 I (../Inc/main.h)(0x5B588C4F)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5ADCF0CA)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5B588C4F)
@@ -55,13 +55,15 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5ADCF0CA)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5ADCF0CA)
 I (..\Hal\hal_key.h)(0x5ADCF0CA)
 I (..\Gizwits\gizwits_product.h)(0x5ADCF0CA)
-I (..\Gizwits\gizwits_protocol.h)(0x5B5BE6C1)
+I (..\Gizwits\gizwits_protocol.h)(0x5B61C868)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5475F300)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5475F300)
 I (..\Utils\common.h)(0x5ADCF0CA)
 I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5475F300)
 I (..\Hal\user_flash.h)(0x5B5D3BBD)
+I (..\Hal\gps.h)(0x5B69B93F)
+I (..\Utils\ringBuffer.h)(0x5ADCF0CA)
 F (../Src/stm32f1xx_it.c)(0x5B588C4E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\Gizwits -I..\Hal -I..\Utils --C99-I C:\Users\PC\Desktop\Meterz_reading\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o stm32f103c8x\stm32f1xx_it.o --omf_browse stm32f103c8x\stm32f1xx_it.crf --depend stm32f103c8x\stm32f1xx_it.d)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5ADCF0CA)
 I (../Inc/stm32f1xx_hal_conf.h)(0x5B588C4F)
@@ -120,12 +122,12 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5ADCF0CA)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5ADCF0CA)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5ADCF0CA)
 I (..\Gizwits\gizwits_product.h)(0x5ADCF0CA)
-I (..\Gizwits\gizwits_protocol.h)(0x5B5BE6C1)
+I (..\Gizwits\gizwits_protocol.h)(0x5B61C868)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5475F300)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (..\Utils\common.h)(0x5ADCF0CA)
 I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5475F300)
-F (..\Gizwits\gizwits_protocol.c)(0x5B5D80D8)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\Gizwits -I..\Hal -I..\Utils --C99-I C:\Users\PC\Desktop\Meterz_reading\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o stm32f103c8x\gizwits_protocol.o --omf_browse stm32f103c8x\gizwits_protocol.crf --depend stm32f103c8x\gizwits_protocol.d)
+F (..\Gizwits\gizwits_protocol.c)(0x5B657A39)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\Gizwits -I..\Hal -I..\Utils --C99-I C:\Users\PC\Desktop\Meterz_reading\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o stm32f103c8x\gizwits_protocol.o --omf_browse stm32f103c8x\gizwits_protocol.crf --depend stm32f103c8x\gizwits_protocol.d)
 I (..\Utils\ringBuffer.h)(0x5ADCF0CA)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
@@ -156,7 +158,7 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h)(0x5ADCF0CA)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5ADCF0CA)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5ADCF0CA)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5ADCF0CA)
-I (..\Gizwits\gizwits_protocol.h)(0x5B5BE6C1)
+I (..\Gizwits\gizwits_protocol.h)(0x5B61C868)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5475F300)
 I (..\Utils\common.h)(0x5ADCF0CA)
 I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5475F300)
@@ -190,8 +192,8 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x5ADCF0CA)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x5ADCF0CA)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x5ADCF0CA)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5475F2FE)
-F (..\Hal\gps.c)(0x5B5D3BA9)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\Gizwits -I..\Hal -I..\Utils --C99-I C:\Users\PC\Desktop\Meterz_reading\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o stm32f103c8x\gps.o --omf_browse stm32f103c8x\gps.crf --depend stm32f103c8x\gps.d)
-I (..\Hal\gps.h)(0x5B5D3C02)
+F (..\Hal\gps.c)(0x5B69C0E2)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\Gizwits -I..\Hal -I..\Utils --C99-I C:\Users\PC\Desktop\Meterz_reading\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o stm32f103c8x\gps.o --omf_browse stm32f103c8x\gps.crf --depend stm32f103c8x\gps.d)
+I (..\Hal\gps.h)(0x5B69B93F)
 I (..\Utils\common.h)(0x5ADCF0CA)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5475F300)
@@ -199,6 +201,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5475F300)
 I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x5475F300)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5475F300)
+I (..\Utils\ringBuffer.h)(0x5ADCF0CA)
 F (..\Hal\user_flash.c)(0x5B5D83A3)(-c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I..\Gizwits -I..\Hal -I..\Utils --C99-I C:\Users\PC\Desktop\Meterz_reading\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o stm32f103c8x\user_flash.o --omf_browse stm32f103c8x\user_flash.crf --depend stm32f103c8x\user_flash.d)
 I (..\Hal\user_flash.h)(0x5B5D3BBD)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x5ADCF0CA)

@@ -35,3 +35,5 @@ stm32f103c8x\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 stm32f103c8x\main.o: ..\Utils\common.h
 stm32f103c8x\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
 stm32f103c8x\main.o: ..\Hal\user_flash.h
+stm32f103c8x\main.o: ..\Hal\gps.h
+stm32f103c8x\main.o: ..\Utils\ringBuffer.h
